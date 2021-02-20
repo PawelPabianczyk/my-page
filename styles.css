@@ -1,0 +1,129 @@
+:root {
+  --azureish: #dbeef2;
+  --columbia: #cae0ef;
+  --beau: #bed0e8;
+  /* #82B3FF */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right top, #6891c3, #cae0ef);
+  overflow: hidden;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  max-width: 1000px;
+  max-height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  background: linear-gradient(
+    to right top,
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.25)
+  );
+  padding: 32px 50px 32px 50px;
+  border-radius: 20px;
+  position: relative;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  overflow: auto;
+}
+
+.bg_img {
+  position: absolute;
+}
+
+.bg_img--chip {
+  top: 0;
+  right: 65%;
+  width: 30vh;
+  animation: slideDown 10s linear infinite;
+}
+
+.bg_img--brain {
+  top: 55%;
+  left: 75%;
+  height: 40vh;
+  animation: rotate 25s linear infinite;
+}
+
+header{
+    flex: 1;
+}
+
+h1 {
+  font-size: 38px;
+  padding: 20px 0 10px;
+  font-weight: 700;
+  background: linear-gradient(90deg,#82b3ff, rgba(255,255,255,0.8));
+  color: #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+  font-size: 15px;
+}
+
+a {
+  color: #82b3ff;
+  text-decoration: none;
+  position: relative;
+}
+
+a:after {
+  content: "";
+  width: 0;
+  height: 3px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: linear-gradient(90deg, transparent, #82b3ff);
+  transition: width 0.3s;
+}
+
+a:hover:after {
+  width: 100%;
+}
+
+.logo{
+    width: 200px;
+    margin-right: 50px;
+}
+
+.logo img{
+    width: 100%;
+    background: #82b3ff;
+    border: solid 3px white;
+    border-radius: 100%;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-30vh);
+  }
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
